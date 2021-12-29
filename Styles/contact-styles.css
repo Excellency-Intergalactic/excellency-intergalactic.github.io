@@ -1632,9 +1632,6 @@ textarea.w-select {
   margin-left: auto;
   margin-right: auto;
 }
-.w-nav-link.w--current {
-  color: #0082f3;
-}
 .w-nav-menu {
   position: relative;
   float: right;
@@ -2152,17 +2149,7 @@ a {
   color: #820000;
 }
 
-.nav-link-3:visited {
-  color: #fff;
-}
 
-.nav-link-3.w--current {
-  color: #fff;
-}
-
-.nav-link-3.w--current:hover {
-  color: #820000;
-}
 
 .brand {
   border: 1px none #000;
@@ -2274,8 +2261,16 @@ a {
 .social-link-image {
   display: inline-block;
   height: 100%;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   -o-object-fit: fill;
   object-fit: fill;
+}
+
+.social-link-image:hover {
+  -webkit-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
 }
 
 .image-5 {
