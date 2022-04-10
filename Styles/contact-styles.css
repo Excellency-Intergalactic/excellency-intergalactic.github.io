@@ -2715,3 +2715,8 @@ a {
   text-align: center;
   white-space: normal;
   }
+
+  .wf-section {
+    height: 700px;
+    overflow: hidden;
+  }
