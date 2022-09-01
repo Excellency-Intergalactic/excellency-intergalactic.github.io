@@ -2328,7 +2328,7 @@ a:hover {
 }
 
 .submit-button-2 {
-    background-color: #820000;
+    background-color: #FF0035;
     opacity: 1;
 }
 
@@ -2338,7 +2338,7 @@ a:hover {
 
 .submit-button-2:active {
     background-color: #fff;
-    color: #820000;
+    color: #FF0035;
 }
 
 .submit-button-2:focus {
@@ -2417,7 +2417,7 @@ a:hover {
     display: block;
     margin-bottom: 10px;
     font-family: 'Foundersgrotesk 05', sans-serif;
-    color: #820000;
+    color: #FF0035;
     letter-spacing: 1.2px;
     text-decoration: none;
 }
@@ -2489,11 +2489,11 @@ a:hover {
 
 .nav-link-3:hover {
     background-color: transparent;
-    color: #820000;
+    color: #FF0035;
 }
 
 .nav-link-3:active {
-    color: #820000;
+    color: #FF0035;
 }
 
 .brand {
@@ -2531,7 +2531,7 @@ a:hover {
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
-    color: #820000;
+    color: #FF0035;
     font-size: 200px;
     line-height: 150px;
     text-align: center;
