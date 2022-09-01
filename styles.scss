@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Disket Mono";
+    src: url("/Fonts/Disket-Mono-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "mono";
+    src: url("/Fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype");
+}
+
+$jetRed: #FF0035;
+
+html {
+    width: 95%;
+    font-family: system-ui, sans-serif;
+}
+
+a {
+    color: $jetRed;
+}
