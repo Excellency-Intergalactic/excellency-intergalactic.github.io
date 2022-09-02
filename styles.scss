@@ -11,6 +11,7 @@
 
 $jetRed: #FF0035;
 $gray: #292929;
+$linkcolor:  #005bc9;
 
 html {
     width: 95%;
@@ -18,5 +19,5 @@ html {
 }
 
 a {
-    color: $jetRed;
+    color: $linkcolor;
 }
