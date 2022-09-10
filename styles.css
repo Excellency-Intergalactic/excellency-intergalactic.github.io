@@ -21,36 +21,48 @@
 
 :root {
   --jetRed: #ff0035;
-  --gray: #292929;
+  --gray: rgb(20,20,20);
   --linkColour: #005bc9;
   --secondary: #c8c8c8;
 }
 
 html {
-  background-color: #000;
   font-family: "mono", system-ui, sans-serif;
 }
 
 body {
+  background-color: #000;
   font-family: "mono", system-ui;
   color: white;
   display: block;
   text-decoration: none;
   line-height: 20px;
+  margin: 0px;
 }
 
 a {
   color: white;
   background-color: transparent;
   text-decoration: none;
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .link-text {
   color: var(--linkColour);
   font-family: "mono", monospace;
 }
+.link-text::after {
+  content: ">"
+}
 .link-text:hover {
-  border-bottom: 1px;
+  text-decoration: underline;
 }
 
 .button {
@@ -153,7 +165,7 @@ a {
   height: 70px;
 }
 
-.header {
+header {
   width: 100%;
   position: fixed;
 }
@@ -196,6 +208,67 @@ nav {
   font-size: 16px;
   text-decoration: none;
 }
+.nav-link:hover {
+  color: var(--jetRed);
+}
+.nav-link.current {
+  color: var(--secondary);
+}
+
+.footer {
+  padding-top: 60px;
+  position: relative;
+  display: block;
+  text-align: center;
+  object-fit: contain;
+  margin-bottom: 40px;
+}
+
+.footer-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.footer-logo {
+  display: block;
+  font-size: 12px;
+  font-family: "Disket Mono";
+  width: 200px;
+  text-align: center;
+}
+
+.footer-menu {
+  display: block;
+  padding-left: 70px;
+}
+
+.footer-heading-link {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer-heading-link:hover {
+  color: var(--jetRed);
+}
+
+.footer-links-list {
+  list-style: none;
+  display: block;
+  padding-left: 0;
+}
+
+.footer-menu-link {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.footer-menu-link:hover {
+  color: var(--jetRed);
+}
 
 .copyright {
   text-align: center;
@@ -216,7 +289,7 @@ nav {
   -o-object-fit: fill;
   object-fit: fill;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .social-link-image {
@@ -225,7 +298,24 @@ nav {
 
 .trademarks {
   color: var(--secondary);
+  letter-spacing: -0.5px;
   text-align: center;
   margin-top: 40px;
   font-size: 10px;
+}
+
+main {
+  padding-top: 70px;
+}
+
+.section {
+
+}
+
+.section.top {
+  width: 100%;
+  height: 600px;
+  background-color: var(--gray);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
