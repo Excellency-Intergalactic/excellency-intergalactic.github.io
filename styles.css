@@ -1,35 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
 @font-face {
   font-family: "Disket Mono";
-  src: url("/Fonts/Disket-Mono-Regular.ttf") format("truetype");
+  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Disket Mono";
-  src: url("/Fonts/Disket-Mono-Bold.ttf") format("truetype");
+  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "mono";
-  src: url("/Fonts/SourceCodePro-VariableFont_wght.ttf") format("truetype");
+  src: url("/fonts/sourcecode_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-$jetRed: #ff0035;
-$gray: #292929;
-$linkcolor: #005bc9;
+:root {
+  --jetRed: #ff0035;
+  --gray: #292929;
+  --linkColour: #005bc9;
+  --secondary: #c8c8c8;
+}
 
 html {
   background-color: #000;
-  font-family: system-ui, sans-serif;
+  font-family: "mono", system-ui, sans-serif;
 }
 
 body {
   font-family: "mono", system-ui;
+  color: white;
+  display: block;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .link-text {
-  color: $linkcolor;
+  color: var(--linkColour);
+  font-family: "mono", monospace;
 }
 .link-text:hover {
   border-bottom: 1px;
@@ -104,7 +122,7 @@ body {
   animation: normal;
   -webkit-animation: normal;
   background-color: transparent;
-  background: $jetRed;
+  background: var(--jetRed);
   -webkit-transition: ease-in;
   -moz-transition: ease-in;
   -ms-transition: ease-in;
@@ -118,7 +136,7 @@ body {
   transition-duration: 200ms;
   animation: normal;
   -webkit-animation: normal;
-  color: $jetRed;
+  color: var(--jetRed);
 }
 
 .button-box {
@@ -132,9 +150,82 @@ body {
 }
 
 .logo {
-  width: 100px;
+  height: 70px;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
 }
 
 .navbar {
-  width: 95%;
+  max-width: 95%;
+  min-width: 90%;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: block;
+  object-fit: contain;
+  font-family: "Disket Mono", monospace;
+}
+
+nav {
+  float: right;
+  position: relative;
+  left: auto;
+  display: block;
+  padding-top: 5px;
+}
+
+.nav-logo {
+  float: left;
+  position: relative;
+  vertical-align: middle;
+  object-fit: fill;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+}
+
+.socials {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 20px 100px;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  -o-object-fit: fill;
+  object-fit: fill;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.social-link-image {
+  width: 70%;
+}
+
+.trademarks {
+  color: var(--secondary);
+  text-align: center;
+  margin-top: 40px;
+  font-size: 10px;
 }
