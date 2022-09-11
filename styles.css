@@ -2,38 +2,40 @@
 
 @font-face {
   font-family: "Disket Mono";
-  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype");
+  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype"),
+      url("/fonts/Disket-Mono-Regular.otf") format("opentype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Disket Mono";
-  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype");
+  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype"),
+     url("/fonts/Disket-Mono-Bold.otf") format("opentype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_regular.ttf") format("truetype");
+  src: url("/fonts/sourcecode_regular.ttf") format("truetype"), url("/fonts/sourcecode_regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_bold.ttf") format("truetype");
+  src: url("/fonts/sourcecode_bold.ttf") format("truetype"), url("/fonts/sourcecode_bold.otf") format("opentype");
   font-weight: bolder;
   font-style: normal;
 }
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_light.ttf") format("truetype");
+  src: url("/fonts/sourcecode_light.ttf") format("truetype"), url("/fonts/sourcecode_light.otf") format("opentype");
   font-weight: lighter;
   font-style: normal;
 }
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_medium.ttf") format("truetype");
+  src: url("/fonts/sourcecode_medium.ttf") format("truetype"), url("/fonts/sourcecode_medium.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
@@ -43,6 +45,7 @@
   --gray: rgb(20,20,20);
   --linkColour: #005bc9;
   --secondary: #c8c8c8;
+  font-family: "mono";
 }
 
 html {
