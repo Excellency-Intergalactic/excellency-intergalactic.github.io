@@ -3,58 +3,67 @@
 @font-face {
   font-family: "Disket Mono";
   src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype"),
-      url("/fonts/Disket-Mono-Regular.otf") format("opentype"), url("/fonts/Disket-Mono-Regular.woff2") format("woff2");
+    url("/fonts/Disket-Mono-Regular.otf") format("opentype"),
+    url("/fonts/Disket-Mono-Regular.woff2") format("woff2");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Disket Mono";
   src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype"),
-     url("/fonts/Disket-Mono-Bold.otf") format("opentype"), url("/fonts/Disket-Mono-Bold.woff2") format("woff2");
+    url("/fonts/Disket-Mono-Bold.otf") format("opentype"),
+    url("/fonts/Disket-Mono-Bold.woff2") format("woff2");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_regular.ttf") format("truetype"), url("/fonts/sourcecode_regular.otf") format("opentype"), url("/fonts/sourcecode_regular.woff2") format("woff2");
+  src: url("/fonts/sourcecode_regular.ttf") format("truetype"),
+    url("/fonts/sourcecode_regular.otf") format("opentype"),
+    url("/fonts/sourcecode_regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "mono";
-  src: url("/fonts/sourcecode_bold.ttf") format("truetype"), url("/fonts/sourcecode_bold.otf") format("opentype"), url("/fonts/sourcecode_bold.woff2") format("woff2");
-  font-weight: bolder;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_light.ttf") format("truetype"), url("/fonts/sourcecode_light.otf") format("opentype"), url("/fonts/sourcecode_light.woff2") format("woff2");
-  font-weight: lighter;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_medium.ttf") format("truetype"), url("/fonts/sourcecode_medium.otf") format("opentype"), url("/fonts/sourcecode_medium.woff2") format("woff2");
+  src: url("/fonts/sourcecode_bold.ttf") format("truetype"),
+    url("/fonts/sourcecode_bold.otf") format("opentype"),
+    url("/fonts/sourcecode_bold.woff2") format("woff2");
   font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_light.ttf") format("truetype"),
+    url("/fonts/sourcecode_light.otf") format("opentype"),
+    url("/fonts/sourcecode_light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_medium.ttf") format("truetype"),
+    url("/fonts/sourcecode_medium.otf") format("opentype"),
+    url("/fonts/sourcecode_medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-	font-family:'SF Pro Icons';
-	font-style:normal;
-	font-weight:500;
-	src:local('☺'), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
-	/* (C) 2019 Apple Inc. All rights reserved.
+  font-family: "SF Pro Icons";
+  font-style: normal;
+  font-weight: 500;
+  src: local("☺"), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
+  /* (C) 2019 Apple Inc. All rights reserved.
  */
 }
 
 :root {
   --jetRed: #ff0035;
-  --gray: rgb(20,20,20);
-  --linkColour: #005bc9;
+  --gray: rgb(20, 20, 20);
+  --linkColour: #2997ff;
   --secondary: #c8c8c8;
-  font-family: "mono";
 }
 
 html {
@@ -71,6 +80,10 @@ body {
   margin: 0px;
 }
 
+main {
+  text-align: center;
+}
+
 a {
   color: white;
   background-color: transparent;
@@ -79,17 +92,19 @@ a {
 }
 
 h1 {
-  font-size: 120px;
+  font-size: 100px;
   font-family: "Disket Mono";
 }
 
 h2 {
-  font-size: 56px;
-  font-weight: bolder;
+  font-size: 55px;
+  font-weight: bold;
 }
 
 h3 {
- font-size: 28px;
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 20px;
 }
 
 .heading-subtext {
@@ -99,16 +114,16 @@ h3 {
 }
 
 h4 {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 h5 {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 h6 {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 5px;
   line-height: 1.5;
@@ -119,19 +134,23 @@ p {
 }
 
 .large-fact {
-font-family: "Disket Mono";
-font-size: 250px;
-font-weight: bold;
-margin: 120px;
+  font-family: "Disket Mono";
+  font-size: 250px;
+  font-weight: bold;
+  margin: 120px;
 }
 
 .link-text {
-  color: var(--linkColour);
+  padding-bottom: 20px;
   font-family: "mono", monospace;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--linkColour);
 }
 .link-text::after {
   font-family: "SF Pro Icons";
-  content: ""
+  content: " ";
 }
 .link-text:hover {
   text-decoration: underline;
@@ -377,8 +396,8 @@ main {
 }
 
 .section {
+  text-align: center;
   display: subgrid;
-  padding: 10px;
 }
 
 .section.top {
