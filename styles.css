@@ -19,6 +19,25 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_bold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --jetRed: #ff0035;
   --gray: rgb(20,20,20);
@@ -47,11 +66,23 @@ a {
   font-size: 12px;
 }
 
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 h3 {
   font-size: 14px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   line-height: 1.5;
+}
+
+.large-fact {
+font-family: "Disket Mono";
+font-size: 250px;
+font-weight: bold;
+margin: 120px;
 }
 
 .link-text {
@@ -65,12 +96,17 @@ h3 {
   text-decoration: underline;
 }
 
+.link-block {
+  height: 50px;
+}
+
 .button {
   border: 1px none #000;
-  font-family: system-ui, sans-serif;
+  font-family: "mono", system-ui, sans-serif;
   font: bold;
+  letter-spacing: -0.5px;
   color: rgb(0, 0, 0);
-  font-size: 19px;
+  font-size: 15px;
   line-height: 100%;
   font-weight: bold;
   position: relative;
@@ -79,30 +115,19 @@ h3 {
   padding-left: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: white;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin-right: 30px;
-  margin-top: 0.5px;
+  margin-top: 20px;
   margin-bottom: 0.5px;
 }
 
 .button-secondary {
   border: 1px none #000;
-  font-family: system-ui, sans-serif;
+  font-family: monospace, system-ui, sans-serif;
   kerning: 5px;
   position: relative;
   z-index: 1;
@@ -117,28 +142,13 @@ h3 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .button:hover {
-  transition: ease-in;
-  transition-duration: 200ms;
   animation: normal;
   -webkit-animation: normal;
   background-color: transparent;
   background: var(--jetRed);
-  -webkit-transition: ease-in;
-  -moz-transition: ease-in;
-  -ms-transition: ease-in;
-  -o-transition: ease-in;
 }
 
 .button-secondary:hover {
@@ -163,6 +173,19 @@ h3 {
 
 .logo {
   height: 70px;
+}
+
+.utility-page-wrap {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  position: fixed;
+}
+
+.utility {
+  padding-top: 100px;
 }
 
 header {
@@ -207,6 +230,7 @@ nav {
   padding: 20px;
   font-size: 16px;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 .nav-link:hover {
   color: var(--jetRed);
@@ -216,12 +240,12 @@ nav {
 }
 
 .footer {
-  padding-top: 60px;
+  padding-top: 40px;
   position: relative;
   display: block;
   text-align: center;
   object-fit: contain;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .footer-container {
@@ -229,7 +253,7 @@ nav {
   margin-left: auto;
   width: fit-content;
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
@@ -259,6 +283,7 @@ nav {
   list-style: none;
   display: block;
   padding-left: 0;
+  margin-top: 0px;
 }
 
 .footer-menu-link {
@@ -293,14 +318,14 @@ nav {
 }
 
 .social-link-image {
-  width: 70%;
+  width: 60%;
 }
 
 .trademarks {
   color: var(--secondary);
   letter-spacing: -0.5px;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
   font-size: 10px;
 }
 
@@ -309,7 +334,7 @@ main {
 }
 
 .section {
-
+  display: subgrid;
 }
 
 .section.top {
