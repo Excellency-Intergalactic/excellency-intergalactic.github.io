@@ -40,6 +40,15 @@
   font-style: normal;
 }
 
+@font-face {
+	font-family:'SF Pro Icons';
+	font-style:normal;
+	font-weight:500;
+	src:local('☺'), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
+	/* (C) 2019 Apple Inc. All rights reserved.
+ */
+}
+
 :root {
   --jetRed: #ff0035;
   --gray: rgb(20,20,20);
@@ -69,16 +78,44 @@ a {
   font-size: 12px;
 }
 
+h1 {
+  font-size: 120px;
+  font-family: "Disket Mono";
+}
+
 h2 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 56px;
+  font-weight: bolder;
 }
 
 h3 {
-  font-size: 14px;
+ font-size: 28px;
+}
+
+.heading-subtext {
+  font-size: 21px;
+  margin-top: 12px;
+  color: var(--secondary);
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
   line-height: 1.5;
+}
+
+p {
+  font-size: 21px;
 }
 
 .large-fact {
@@ -93,7 +130,8 @@ margin: 120px;
   font-family: "mono", monospace;
 }
 .link-text::after {
-  content: ">"
+  font-family: "SF Pro Icons";
+  content: ""
 }
 .link-text:hover {
   text-decoration: underline;
@@ -106,7 +144,6 @@ margin: 120px;
 .button {
   border: 1px none #000;
   font-family: "mono", system-ui, sans-serif;
-  font: bold;
   letter-spacing: -0.5px;
   color: rgb(0, 0, 0);
   font-size: 15px;
@@ -130,7 +167,8 @@ margin: 120px;
 
 .button-secondary {
   border: 1px none #000;
-  font-family: monospace, system-ui, sans-serif;
+  font-family: "mono", system-ui, sans-serif;
+  font-size: 15px;
   kerning: 5px;
   position: relative;
   z-index: 1;
@@ -245,7 +283,7 @@ nav {
 }
 
 .footer {
-  padding-top: 40px;
+  padding-top: 10px;
   position: relative;
   display: block;
   text-align: center;
@@ -277,7 +315,7 @@ nav {
 
 .footer-heading-link {
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .footer-heading-link:hover {
@@ -340,6 +378,7 @@ main {
 
 .section {
   display: subgrid;
+  padding: 10px;
 }
 
 .section.top {
