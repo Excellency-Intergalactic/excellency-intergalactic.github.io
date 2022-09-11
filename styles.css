@@ -1,0 +1,348 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+@font-face {
+  font-family: "Disket Mono";
+  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Disket Mono";
+  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_bold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "mono";
+  src: url("/fonts/sourcecode_medium.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --jetRed: #ff0035;
+  --gray: rgb(20,20,20);
+  --linkColour: #005bc9;
+  --secondary: #c8c8c8;
+}
+
+html {
+  font-family: "mono", system-ui, sans-serif;
+}
+
+body {
+  background-color: #000;
+  font-family: "mono", system-ui;
+  color: white;
+  display: block;
+  text-decoration: none;
+  line-height: 20px;
+  margin: 0px;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.large-fact {
+font-family: "Disket Mono";
+font-size: 250px;
+font-weight: bold;
+margin: 120px;
+}
+
+.link-text {
+  color: var(--linkColour);
+  font-family: "mono", monospace;
+}
+.link-text::after {
+  content: ">"
+}
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.link-block {
+  height: 50px;
+}
+
+.button {
+  border: 1px none #000;
+  font-family: "mono", system-ui, sans-serif;
+  font: bold;
+  letter-spacing: -0.5px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  line-height: 100%;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 0.5px;
+}
+
+.button-secondary {
+  border: 1px none #000;
+  font-family: monospace, system-ui, sans-serif;
+  kerning: 5px;
+  position: relative;
+  z-index: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(23, 21, 21);
+  color: rgb(200, 200, 200);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.button:hover {
+  animation: normal;
+  -webkit-animation: normal;
+  background-color: transparent;
+  background: var(--jetRed);
+}
+
+.button-secondary:hover {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: ease-in;
+  transition-duration: 200ms;
+  animation: normal;
+  -webkit-animation: normal;
+  color: var(--jetRed);
+}
+
+.button-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 372px;
+  margin-top: 40px;
+  max-height: 36px;
+}
+
+.logo {
+  height: 70px;
+}
+
+.utility-page-wrap {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  position: fixed;
+}
+
+.utility {
+  padding-top: 100px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+}
+
+.navbar {
+  max-width: 95%;
+  min-width: 90%;
+  height: auto;
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: block;
+  object-fit: contain;
+  font-family: "Disket Mono", monospace;
+}
+
+nav {
+  float: right;
+  position: relative;
+  left: auto;
+  display: block;
+  padding-top: 5px;
+}
+
+.nav-logo {
+  float: left;
+  position: relative;
+  vertical-align: middle;
+  object-fit: fill;
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-link:hover {
+  color: var(--jetRed);
+}
+.nav-link.current {
+  color: var(--secondary);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer {
+  padding-top: 40px;
+  position: relative;
+  display: block;
+  text-align: center;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: fit-content;
+  display: flex;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-logo {
+  display: block;
+  font-size: 12px;
+  font-family: "Disket Mono";
+  width: 200px;
+  text-align: center;
+}
+
+.footer-menu {
+  display: block;
+  padding-left: 70px;
+}
+
+.footer-heading-link {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.footer-heading-link:hover {
+  color: var(--jetRed);
+}
+
+.footer-links-list {
+  list-style: none;
+  display: block;
+  padding-left: 0;
+  margin-top: 0px;
+}
+
+.footer-menu-link {
+  color: var(--secondary);
+  font-size: 12px;
+}
+
+.footer-menu-link:hover {
+  color: var(--jetRed);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+}
+
+.socials {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 20px 100px;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  -o-object-fit: fill;
+  object-fit: fill;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-link-image {
+  width: 60%;
+}
+
+.trademarks {
+  color: var(--secondary);
+  letter-spacing: -0.5px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 10px;
+}
+
+main {
+  padding-top: 70px;
+}
+
+.section {
+  display: subgrid;
+}
+
+.section.top {
+  width: 100%;
+  height: 600px;
+  background-color: var(--gray);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
