@@ -92,19 +92,23 @@ a {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 60px;
   font-family: "Disket Mono";
 }
 
 h2 {
-  font-size: 55px;
+  font-size: 50px;
   font-weight: bold;
+
+  opacity: 0.92;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: normal;
   padding-bottom: 20px;
+
+  opacity: 0.92;
 }
 
 .heading-subtext {
@@ -115,11 +119,13 @@ h3 {
 
 h4 {
   font-size: 20px;
+  opacity: 0.92;
 }
 
 h5 {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: normal;
+  opacity: .92;
 }
 
 h6 {
@@ -130,7 +136,7 @@ h6 {
 }
 
 p {
-  font-size: 21px;
+  font-size: 20px;
 }
 
 .spacer {
@@ -254,7 +260,7 @@ p {
 
 header {
   width: 100%;
-  position: fixed;
+  position: absolute;
 }
 
 .navbar {
@@ -270,7 +276,7 @@ header {
   font-family: "Disket Mono", monospace;
 }
 
-nav {
+.navlinks {
   float: right;
   position: relative;
   left: auto;
@@ -304,6 +310,93 @@ nav {
   font-size: 16px;
   font-weight: bold;
 }
+
+.localnav-background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+}
+
+@supports (padding: calc(max(0px))) {
+  .localnav-content {
+    padding-left: calc(max(22px, env(safe-area-inset-left)));
+    padding-right: calc(max(22px, env(safe-area-inset-right)));
+  }
+}
+
+.localnav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52px;
+  min-height: 100%;
+  z-index: 1;
+}
+
+.localnav-content {
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  display: table;
+  border-bottom: 1px;
+}
+
+.localnav-title {
+  font-size: 21px;
+  line-height: 1.14286;
+  font-weight: 600;
+  letter-spacing: 0.011em;
+  font-family: "mono", sans-serif;
+  cursor: default;
+  display: block;
+  float: left;
+  margin: 14px 0 -14px;
+  padding: 0;
+  height: 52px;
+  white-space: nowrap;
+}
+
+.localnav-menu {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+  float: right;
+  margin-top: -3px;
+}
+
+nav ul,
+nav ol {
+  margin: 0;
+  list-style: none;
+}
+li {
+  display: list-item;
+  text-align: match-parent;
+}
+
+.localnav-menu-item {
+  margin-left: 24px;
+  float: left;
+  list-style: none;
+}
+
+.localnav-menu-link {
+  color: white;
+  display: inline-block;
+  line-height: 22px;
+  white-space: nowrap;
+  opacity: .92;
+  }
 
 .footer {
   padding-top: 10px;
@@ -362,8 +455,12 @@ nav {
 }
 
 .copyright {
-  text-align: center;
-  font-size: 14px;
+  text-align: left;
+  font-size: 11px;
+}
+
+.copyright-container {
+  display: inline-flex;
 }
 
 .socials {
@@ -384,7 +481,7 @@ nav {
 }
 
 .social-link-image {
-  width: 60%;
+  width: 50%;
 }
 
 .social-link-image.large {
@@ -402,8 +499,7 @@ nav {
 .trademarks {
   color: var(--secondary);
   letter-spacing: -0.5px;
-  text-align: center;
-  margin-top: 20px;
+  text-align: right;
   font-size: 10px;
 }
 
@@ -416,10 +512,30 @@ main {
   display: subgrid;
 }
 
+.section.hero {
+  text-align: left;
+  width: 100%;
+  height: 500px;
+  background-color: var(--gray);
+}
+
+.section-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 980px;
+  display: block;
+  padding-top: 30px;
+}
+
+.section-background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 .section.top {
   width: 100%;
   height: 500px;
   background-color: var(--gray);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
 }
