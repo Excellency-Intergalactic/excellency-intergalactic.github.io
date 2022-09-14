@@ -119,13 +119,15 @@ h3 {
 
 h4 {
   font-size: 20px;
-  opacity: 0.92;
+  opacity: 0.90;
+  font-weight: normal;
 }
 
 h5 {
   font-size: 16px;
   font-weight: normal;
   opacity: .92;
+  margin-bottom: 10px;
 }
 
 h6 {
@@ -140,7 +142,7 @@ p {
 }
 
 .spacer {
-  padding: 100px;
+  padding: 50px;
 }
 
 .large-fact {
@@ -170,14 +172,13 @@ p {
   height: 50px;
 }
 
-.button {
+button, .button {
   border: 1px none #000;
   font-family: "mono", system-ui, sans-serif;
-  letter-spacing: -0.5px;
   color: rgb(0, 0, 0);
   font-size: 15px;
   line-height: 100%;
-  font-weight: bold;
+  font-weight: 500;
   position: relative;
   z-index: 1;
   padding-right: 10px;
@@ -192,6 +193,7 @@ p {
   -o-border-radius: 10px;
   margin-top: 20px;
   margin-bottom: 0.5px;
+  letter-spacing: 0.5px;
 }
 
 .button-secondary {
@@ -214,11 +216,13 @@ p {
   -o-border-radius: 10px;
 }
 
-.button:hover {
+button:hover, .button:hover {
   animation: normal;
   -webkit-animation: normal;
   background-color: transparent;
   background: var(--jetRed);
+  color: white;
+  cursor: pointer;
 }
 
 .button-secondary:hover {
@@ -293,7 +297,7 @@ header {
 
 .nav-link {
   color: white;
-  font-weight: bold;
+  font-weight: normal;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -413,7 +417,7 @@ li {
   width: fit-content;
   display: flex;
   margin-bottom: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .footer-logo {
@@ -427,11 +431,13 @@ li {
 .footer-menu {
   display: block;
   padding-left: 70px;
+  text-align: left;
 }
 
 .footer-heading-link {
   font-weight: bold;
   font-size: 14px;
+  text-align: left;
 }
 
 .footer-heading-link:hover {
@@ -439,6 +445,7 @@ li {
 }
 
 .footer-links-list {
+  text-align: left;
   list-style: none;
   display: block;
   padding-left: 0;
@@ -499,7 +506,7 @@ li {
 .trademarks {
   color: var(--secondary);
   letter-spacing: -0.5px;
-  text-align: right;
+  text-align: left;
   font-size: 10px;
 }
 
@@ -509,28 +516,36 @@ main {
 
 .section {
   text-align: center;
-  display: subgrid;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
 }
 
 .section.hero {
   text-align: left;
   width: 100%;
-  height: 500px;
-  background-color: var(--gray);
+  height: 450px;
+  display: block;
+  background-color: var(--jetRed);
+  background-size: cover;
+  object-fit: contain;
 }
 
 .section-content {
   margin-left: auto;
   margin-right: auto;
   width: 980px;
-  display: block;
-  padding-top: 30px;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  position: relative;
 }
 
 .section-background {
   width: 100%;
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  float: none;
+  object-fit: contain;
 }
 
 .section.top {
@@ -538,4 +553,54 @@ main {
   height: 500px;
   background-color: var(--gray);
   padding-top: 20px;
+}
+
+.section.main {
+
+}
+
+.section-header {
+  padding-top: 50px;
+}
+
+form {
+  font-family: "mono", system-ui;
+ margin-left: auto;
+ margin-right: auto;
+ padding: 50px;
+ width: 700px;
+ text-align: left;
+}
+
+input, textarea {
+  font-family: "mono", system-ui;
+  border: #000;
+  border-radius: 10px;
+  height: 30px;
+  width: 60%;
+  padding: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+textarea.message {
+  height: 200px;
+  padding-top: 10px;
+  vertical-align: top;
+}
+
+input.checkbox {
+  width: auto;
+  margin-right: 10px;
+  height: auto;
+}
+input.submit {
+  margin-top: 20px;
+  width: 62%;
+  height: 30px
 }
