@@ -1,606 +1,278 @@
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 @font-face {
-  font-family: "Disket Mono";
-  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype"),
-    url("/fonts/Disket-Mono-Regular.otf") format("opentype"),
-    url("/fonts/Disket-Mono-Regular.woff2") format("woff2");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Disket Mono";
-  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype"),
-    url("/fonts/Disket-Mono-Bold.otf") format("opentype"),
-    url("/fonts/Disket-Mono-Bold.woff2") format("woff2");
-  font-weight: bold;
+    font-family: "Disket Mono";
+    src: url("assets/fonts/Disket-Mono-Regular.ttf") format("truetype"),
+        url("assets/fonts/Disket-Mono-Regular.otf") format("opentype"),
+        url("assets/fonts/Disket-Mono-Regular.woff1") format("woff1"),
+        url("assets/fonts/Disket-Mono-Regular.woff2") format("woff2");
+    font-weight: normal;
 }
 
 @font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_regular.ttf") format("truetype"),
-    url("/fonts/sourcecode_regular.otf") format("opentype"),
-    url("/fonts/sourcecode_regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_bold.ttf") format("truetype"),
-    url("/fonts/sourcecode_bold.otf") format("opentype"),
-    url("/fonts/sourcecode_bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_light.ttf") format("truetype"),
-    url("/fonts/sourcecode_light.otf") format("opentype"),
-    url("/fonts/sourcecode_light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_medium.ttf") format("truetype"),
-    url("/fonts/sourcecode_medium.otf") format("opentype"),
-    url("/fonts/sourcecode_medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "SF Pro Icons";
-  font-style: normal;
-  font-weight: 500;
-  src: local("☺"), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
-  /* (C) 2019 Apple Inc. All rights reserved.
- */
+    font-family: "Disket Mono";
+    src: url("assets/fonts/Disket-Mono-Bold.ttf") format("truetype"),
+        url("assets/fonts/Disket-Mono-Bold.otf") format("opentype"),
+        url("assets/fonts/Disket-Mono-Bold.woff1") format("woff1"),
+        url("assets/fonts/Disket-Mono-Bold.woff2") format("woff2");
+    font-weight: bold;
 }
 
 :root {
-  --jetRed: #ff0035;
-  --gray: rgb(20, 20, 20);
-  --linkColour: #2997ff;
-  --secondary: #c8c8c8;
+    --black: black;
+    --primary: #FF0040;
+    --dark: #292929;
+    --white: white;
+    --white50: rgba(255, 255, 255, 0.5);
+
+    --font-size-s: 0.75rem;
+    --font-size-m: 2rem;
+    --font-size-l: 4rem;
+    --font-size-xl: 6rem;
+    --font-family-sans: "Montserrat";
+    --font-family-mono: "Disket Mono";
+    --font-family-mono-2: "IBM Plex Mono";
 }
 
-html {
-  font-family: "mono", system-ui, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans);
 }
 
 body {
-  background-color: #000;
-  font-family: "mono", system-ui;
-  color: white;
-  display: block;
-  text-decoration: none;
-  line-height: 20px;
-  margin: 0px;
+    background-color: var(--black);
 }
 
-main {
-  text-align: center;
+.apps-background {
+    background-image: url("https://images.unsplash.com/photo-1472803828399-39d4ac53c6e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1853&q=80");
+    /* height: 100vh; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-a {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-  font-size: 12px;
+.container {
+    width: 100%;
+    /* min-height: 100vh; */
+    padding-left: 16%;
+    padding-right: 16%;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-h1 {
-  font-size: 60px;
-  font-family: "Disket Mono";
-}
-
-h2 {
-  font-size: 50px;
-  font-weight: bold;
-
-  opacity: 0.92;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: normal;
-  padding-bottom: 20px;
-
-  opacity: 0.92;
-}
-
-.heading-subtext {
-  font-size: 21px;
-  margin-top: 12px;
-  color: var(--secondary);
-}
-
-h4 {
-  font-size: 20px;
-  opacity: 0.90;
-  font-weight: normal;
-}
-
-h5 {
-  font-size: 16px;
-  font-weight: normal;
-  opacity: .92;
-  margin-bottom: 10px;
-}
-
-h6 {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  line-height: 1.5;
-}
-
-p {
-  font-size: 20px;
-}
-
-.spacer {
-  padding: 50px;
-}
-
-.large-fact {
-  font-family: "Disket Mono";
-  font-size: 250px;
-  font-weight: bold;
-  margin: 120px;
-}
-
-.link-text {
-  padding-bottom: 20px;
-  font-family: "mono", monospace;
-  font-weight: normal;
-  cursor: pointer;
-  font-size: 18px;
-  color: var(--linkColour);
-}
-.link-text::after {
-  font-family: "SF Pro Icons";
-  content: " ";
-}
-.link-text:hover {
-  text-decoration: underline;
-}
-
-.link-block {
-  height: 50px;
-}
-
-button, .button {
-  border: 1px none #000;
-  font-family: "mono", system-ui, sans-serif;
-  color: rgb(0, 0, 0);
-  font-size: 15px;
-  line-height: 100%;
-  font-weight: 500;
-  position: relative;
-  z-index: 1;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: white;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  margin-top: 20px;
-  margin-bottom: 0.5px;
-  letter-spacing: 0.5px;
-}
-
-.button-secondary {
-  border: 1px none #000;
-  font-family: "mono", system-ui, sans-serif;
-  font-size: 15px;
-  kerning: 5px;
-  position: relative;
-  z-index: 1;
-  padding-right: 10px;
-  padding-left: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  background-color: rgb(23, 21, 21);
-  color: rgb(200, 200, 200);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-button:hover, .button:hover {
-  animation: normal;
-  -webkit-animation: normal;
-  background-color: transparent;
-  background: var(--jetRed);
-  color: white;
-  cursor: pointer;
-}
-
-.button-secondary:hover {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  transition: ease-in;
-  transition-duration: 200ms;
-  animation: normal;
-  -webkit-animation: normal;
-  color: var(--jetRed);
-}
-
-.button-box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 372px;
-  margin-top: 40px;
-  max-height: 36px;
-}
-
-.logo {
-  height: 70px;
-}
-
-.utility-page-wrap {
-  width: 100%;
-  text-align: center;
-  margin-top: auto;
-  margin-bottom: auto;
-  display: block;
-  position: fixed;
-}
-
-.utility {
-  padding-top: 100px;
-}
-
-header {
-  width: 100%;
-  position: absolute;
+.container-fill {
+    width: 100%;
+    padding-left: 16%;
+    padding-right: 16%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: var(--dark);
 }
 
 .navbar {
-  max-width: 95%;
-  min-width: 90%;
-  height: auto;
-  width: auto;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-  display: block;
-  object-fit: contain;
-  font-family: "Disket Mono", monospace;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.navlinks {
-  float: right;
-  position: relative;
-  left: auto;
-  display: block;
-  padding-top: 5px;
+.logo {
+    width: 3.75rem;
+    cursor: pointer;
+    margin: 0.75rem 0;
 }
 
-.nav-logo {
-  float: left;
-  position: relative;
-  vertical-align: middle;
-  object-fit: fill;
+.logo-l {
+    width: 7.5rem;
+    cursor: pointer;
+    margin: 0.75rem 0;
 }
 
-.nav-link {
-  color: white;
-  font-weight: normal;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  padding: 20px;
-  font-size: 16px;
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-.nav-link:hover {
-  color: var(--jetRed);
-}
-.nav-link.current {
-  color: var(--secondary);
-  font-size: 16px;
-  font-weight: bold;
+nav {
+    flex: 1;
+    text-align: right;
 }
 
-.localnav-background {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: background-color 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 3rem;
+    font-weight: bold;
 }
 
-@supports (padding: calc(max(0px))) {
-  .localnav-content {
-    padding-left: calc(max(22px, env(safe-area-inset-left)));
-    padding-right: calc(max(22px, env(safe-area-inset-right)));
-  }
+nav ul li a {
+    text-decoration: none;
+    color: var(--white50);
+    font-size: var(--font-size-s);
+    font-family: var(--font-family-mono);
+    transition: 250ms;
 }
 
-.localnav {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 52px;
-  min-height: 100%;
-  z-index: 1;
+nav ul li a:hover {
+    color: var(--primary);
 }
 
-.localnav-content {
-  margin: 0 auto;
-  max-width: 980px;
-  padding: 0 22px;
-  position: relative;
-  z-index: 2;
-  display: table;
-  border-bottom: 1px;
+h1 {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-xl);
+    line-height: 6rem;
+    color: var(--white);
+    font-weight: bold;
 }
 
-.localnav-title {
-  font-size: 21px;
-  line-height: 1.14286;
-  font-weight: 600;
-  letter-spacing: 0.011em;
-  font-family: "mono", sans-serif;
-  cursor: default;
-  display: block;
-  float: left;
-  margin: 14px 0 -14px;
-  padding: 0;
-  height: 52px;
-  white-space: nowrap;
+h2 {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-l);
+    line-height: 4rem;
+    color: var(--white);
+    font-weight: bold;
 }
 
-.localnav-menu {
-  font-size: 12px;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -0.01em;
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  float: right;
-  margin-top: -3px;
+h3 {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-m);
+    line-height: 2rem;
+    color: var(--white);
+    font-weight: bold;
 }
 
-nav ul,
-nav ol {
-  margin: 0;
-  list-style: none;
-}
-li {
-  display: list-item;
-  text-align: match-parent;
+p {
+    font-family: var(--font-family-mono-2);
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--white);
+    font-weight: normal;
 }
 
-.localnav-menu-item {
-  margin-left: 24px;
-  float: left;
-  list-style: none;
+h6 {
+    font-family: var(--font-family-mono-2);
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--white50);
+    font-weight: normal;
 }
 
-.localnav-menu-link {
-  color: white;
-  display: inline-block;
-  line-height: 22px;
-  white-space: nowrap;
-  opacity: .92;
-  }
+a {
+    font-family: var(--font-family-mono-2);
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: 250ms;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+a.cta {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 500ms;
+}
+
+a.cta:hover {
+    padding-left: 2rem;
+}
+
+.hero-apps {
+    margin: 8rem 0 10rem 0;
+}
+
+.hero-apps-text {
+    margin: 2rem 0;
+    text-align: right;
+}
+
+.centered-text {
+    text-align: center;
+    margin: 12rem 0;
+}
+
+.picture-tradinggenie {
+    background-image: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1925&q=80");
+    height: 32rem;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.picture-appplan {
+    background-image: url("https://images.unsplash.com/photo-1576836165612-8bc9b07e7778?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80");
+    height: 32rem;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.picture-loremipsum {
+    background-image: url("https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1365&q=80");
+    height: 32rem;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.app-text-left {
+    margin-top: 5rem;
+}
+
+.app-text-right {
+    margin-top: 5rem;
+    text-align: right;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.white {
+    color: var(--white);
+}
+
+.white50 {
+    color: var(--white50);
+}
+
+.mono {
+    font-family: var(--font-family-mono);
+}
+
+.mono-2 {
+    font-family: var(--font-family-mono-2);
+}
+
+.sans {
+    font-family: var(--font-family-sans);
+}
+
+.bold {
+    font-weight: bold;
+}
+
 
 .footer {
-  padding-top: 10px;
-  position: relative;
-  display: block;
-  text-align: center;
-  object-fit: contain;
-  margin-bottom: 20px;
+    margin: 6rem 0;
+    text-align: center;
 }
 
-.footer-container {
-  margin-right: auto;
-  margin-left: auto;
-  width: fit-content;
-  display: flex;
-  margin-bottom: 20px;
-  text-align: center;
+.row-1 {
+    margin: 4rem 8rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer-logo {
-  display: block;
-  font-size: 12px;
-  font-family: "Disket Mono";
-  width: 200px;
-  text-align: center;
+.col-1 {
+    flex-basis: 25%;
+    position: relative;
+    text-align: left;
 }
 
-.footer-menu {
-  display: block;
-  padding-left: 70px;
-  text-align: left;
-}
-
-.footer-heading-link {
-  font-weight: bold;
-  font-size: 14px;
-  text-align: left;
-}
-
-.footer-heading-link:hover {
-  color: var(--jetRed);
-}
-
-.footer-links-list {
-  text-align: left;
-  list-style: none;
-  display: block;
-  padding-left: 0;
-  margin-top: 0px;
-}
-
-.footer-menu-link {
-  color: var(--secondary);
-  font-size: 12px;
-}
-
-.footer-menu-link:hover {
-  color: var(--jetRed);
-}
-
-.copyright {
-  text-align: left;
-  font-size: 11px;
-}
-
-.copyright-container {
-  display: inline-flex;
-}
-
-.socials {
-  position: relative;
-  display: block;
-  text-align: center;
-  margin: 20px 100px;
-}
-
-.social-link {
-  display: inline-block;
-  padding: 10px;
-  position: relative;
-  -o-object-fit: fill;
-  object-fit: fill;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.social-link-image {
-  width: 50%;
-}
-
-.social-link-image.large {
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 50%;
-  transition: ease-in-out;
-  transition-duration: 100ms;
-  -webkit-transition: ease-in-out;
-  -moz-transition: ease-in-out;
-  -ms-transition: ease-in-out;
-  -o-transition: ease-in-out;
-}
-
-.trademarks {
-  color: var(--secondary);
-  letter-spacing: -0.5px;
-  text-align: left;
-  font-size: 10px;
-}
-
-main {
-  padding-top: 70px;
-}
-
-.section {
-  text-align: center;
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background-color: transparent;
-}
-
-.section.hero {
-  text-align: left;
-  width: 100%;
-  height: 450px;
-  display: block;
-  background-color: var(--jetRed);
-  background-size: cover;
-  object-fit: contain;
-}
-
-.section-content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 980px;
-  padding-top: 40px;
-  padding-bottom: 100px;
-  position: relative;
-}
-
-.section-background {
-  width: 100%;
-  position: absolute;
-  float: none;
-  object-fit: contain;
-}
-
-.section.top {
-  width: 100%;
-  height: 500px;
-  background-color: var(--gray);
-  padding-top: 20px;
-}
-
-.section.main {
-
-}
-
-.section-header {
-  padding-top: 50px;
-}
-
-form {
-  font-family: "mono", system-ui;
- margin-left: auto;
- margin-right: auto;
- padding: 50px;
- width: 700px;
- text-align: left;
-}
-
-input, textarea {
-  font-family: "mono", system-ui;
-  border: #000;
-  border-radius: 10px;
-  height: 30px;
-  width: 60%;
-  padding: 5px;
-  padding-left: 10px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
-
-textarea.message {
-  height: 200px;
-  padding-top: 10px;
-  vertical-align: top;
-}
-
-input.checkbox {
-  width: auto;
-  margin-right: 10px;
-  height: auto;
-}
-input.submit {
-  margin-top: 20px;
-  width: 62%;
-  height: 30px
+.icon {
+    height: .75rem;
+    padding-right: 1rem;
 }
