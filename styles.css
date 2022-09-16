@@ -52,6 +52,11 @@ body {
     background-size: cover;
 }
 
+.contact-background {
+    background-image: linear-gradient(45deg, hsla(258, 35%, 34%, 1) 0%, hsla(349, 65%, 44%, 1) 50%, hsla(47, 79%, 55%, 1) 100%);
+
+}
+
 .container {
     width: 100%;
     /* min-height: 100vh; */
@@ -131,7 +136,7 @@ h2 {
 h3 {
     font-family: var(--font-family-sans);
     font-size: var(--font-size-m);
-    line-height: 2rem;
+    line-height: 3rem;
     color: var(--white);
     font-weight: bold;
 }
@@ -179,13 +184,21 @@ a.cta:hover {
     padding-left: 2rem;
 }
 
-.hero-apps {
+.apps-hero {
     margin: 8rem 0 10rem 0;
 }
 
-.hero-apps-text {
+.apps-hero-text {
     margin: 2rem 0;
     text-align: right;
+}
+
+.contact-hero {
+    margin: 8rem 0 10rem 0;
+}
+
+.contact-form {
+    margin-top: 4rem;
 }
 
 .centered-text {
@@ -217,11 +230,11 @@ a.cta:hover {
     background-size: 50%;
 }
 
-.app-text-left {
+.apps-text-left {
     margin-top: 5rem;
 }
 
-.app-text-right {
+.apps-text-right {
     margin-top: 5rem;
     text-align: right;
 }
@@ -272,7 +285,52 @@ a.cta:hover {
     text-align: left;
 }
 
+.col-2 {
+    flex-basis: 20%;
+    position: relative;
+    text-align: center;
+}
+
 .icon {
     height: .75rem;
     padding-right: 1rem;
+}
+
+.icon-l {
+    height: 3rem;
+}
+
+.textfield {
+    border: none;
+    padding: 0.5rem;
+    width: 24rem;
+    font-family: var(--font-family-mono-2);
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--white);
+    font-weight: normal;
+    background-color: var(--dark);
+    margin-bottom: 2rem;
+}
+
+.textfield:focus {
+    outline: var(--primary) solid 0.1rem;
+}
+
+.button {
+    border: var(--primary) solid 0.1rem;
+    padding: 0 2rem;
+    font-family: var(--font-family-mono);
+    font-weight: bold;
+    font-size: var(--font-size-s);
+    line-height: 1.5rem;
+    color: var(--primary);
+    background-color: var(--black);
+    transition: 250ms;
+    margin-top: 2rem;
+}
+
+.button:hover {
+    background-color: var(--primary);
+    color: var(--white);
 }
