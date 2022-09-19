@@ -121,6 +121,7 @@ h4 {
   font-size: 20px;
   opacity: 0.90;
   font-weight: normal;
+  margin-bottom: 15px;
 }
 
 h5 {
@@ -246,7 +247,7 @@ button:hover, .button:hover {
 }
 
 .logo {
-  height: 70px;
+  height: 60px;
 }
 
 .utility-page-wrap {
@@ -275,9 +276,10 @@ header {
   margin-right: auto;
   margin-left: auto;
   position: relative;
-  display: block;
   object-fit: contain;
   font-family: "Disket Mono", monospace;
+  vertical-align: middle;
+  z-index: 3;
 }
 
 .navlinks {
@@ -285,7 +287,6 @@ header {
   position: relative;
   left: auto;
   display: block;
-  padding-top: 5px;
 }
 
 .nav-logo {
@@ -293,16 +294,18 @@ header {
   position: relative;
   vertical-align: middle;
   object-fit: fill;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .nav-link {
   color: white;
-  font-weight: normal;
+  font-weight: bold;
   display: inline-block;
   position: relative;
   vertical-align: middle;
   padding: 20px;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -462,8 +465,8 @@ li {
 }
 
 .copyright {
-  text-align: left;
-  font-size: 11px;
+  text-align: center;
+  font-size: 12px;
 }
 
 .copyright-container {
@@ -511,7 +514,7 @@ li {
 }
 
 main {
-  padding-top: 70px;
+  z-index: 0;
 }
 
 .section {
@@ -555,10 +558,6 @@ main {
   padding-top: 20px;
 }
 
-.section.main {
-
-}
-
 .section-header {
   padding-top: 50px;
 }
@@ -586,6 +585,11 @@ input, textarea {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  background-color: var(--gray);
+}
+
+input:focus, textarea:focus {
+  border: var(--jetRed);
 }
 
 textarea.message {
