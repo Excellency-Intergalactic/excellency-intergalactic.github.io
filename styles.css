@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap');
 
 @font-face {
   font-family: "Disket Mono";
@@ -17,62 +18,27 @@
 }
 
 @font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_regular.ttf") format("truetype"),
-    url("/fonts/sourcecode_regular.otf") format("opentype"),
-    url("/fonts/sourcecode_regular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_bold.ttf") format("truetype"),
-    url("/fonts/sourcecode_bold.otf") format("opentype"),
-    url("/fonts/sourcecode_bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_light.ttf") format("truetype"),
-    url("/fonts/sourcecode_light.otf") format("opentype"),
-    url("/fonts/sourcecode_light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
-}
-@font-face {
-  font-family: "mono";
-  src: url("/fonts/sourcecode_medium.ttf") format("truetype"),
-    url("/fonts/sourcecode_medium.otf") format("opentype"),
-    url("/fonts/sourcecode_medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "SF Pro Icons";
   font-style: normal;
   font-weight: 500;
   src: local("☺"), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
-  /* (C) 2019 Apple Inc. All rights reserved.
- */
 }
 
 :root {
   --jetRed: #ff0035;
-  --gray: rgb(20, 20, 20);
+  --gray: rgb(25, 25, 25);
   --linkColour: #2997ff;
   --secondary: #c8c8c8;
+  --font-mono: "IBM Plex Mono"
 }
 
 html {
-  font-family: "mono", system-ui, sans-serif;
+  font-family: var(--font-mono), system-ui, sans-serif;
 }
 
 body {
   background-color: #000;
-  font-family: "mono", system-ui;
+  font-family: var(--font-mono), system-ui;
   color: white;
   display: block;
   text-decoration: none;
@@ -92,22 +58,22 @@ a {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 120px;
   font-family: "Disket Mono";
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 66px;
   font-weight: bold;
 
   opacity: 0.92;
 }
 
 h3 {
-  font-size: 24px;
-  font-weight: normal;
-  padding-bottom: 20px;
-
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-bottom: 10px;
   opacity: 0.92;
 }
 
@@ -118,16 +84,16 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
-  opacity: 0.90;
+  font-size: 21px;
+  opacity: 0.9;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
-  opacity: .92;
+  opacity: 0.92;
   margin-bottom: 10px;
 }
 
@@ -139,11 +105,20 @@ h6 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.space-bottom {
+  padding-bottom: 10px;
 }
 
 .spacer {
   padding: 50px;
+}
+
+.secondary {
+  color: var(--secondary);
 }
 
 .large-fact {
@@ -155,10 +130,10 @@ p {
 
 .link-text {
   padding-bottom: 20px;
-  font-family: "mono", monospace;
+  font-family: var(--font-mono), monospace;
   font-weight: normal;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--jetRed);
 }
 .link-text::after {
@@ -173,9 +148,14 @@ p {
   height: 50px;
 }
 
-button, .button {
+.feature-glyph {
+  height: 50px;
+}
+
+button,
+.button {
   border: 1px none #000;
-  font-family: "mono", system-ui, sans-serif;
+  font-family: var(--font-mono), system-ui, sans-serif;
   color: rgb(0, 0, 0);
   font-size: 15px;
   line-height: 100%;
@@ -199,7 +179,7 @@ button, .button {
 
 .button-secondary {
   border: 1px none #000;
-  font-family: "mono", system-ui, sans-serif;
+  font-family: var(--font-mono), system-ui, sans-serif;
   font-size: 15px;
   kerning: 5px;
   position: relative;
@@ -217,7 +197,8 @@ button, .button {
   -o-border-radius: 10px;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   animation: normal;
   -webkit-animation: normal;
   background-color: transparent;
@@ -263,13 +244,15 @@ button:hover, .button:hover {
   padding-top: 100px;
 }
 
+/* HEADER & NAVBAR */
+
 header {
   width: 100%;
   position: absolute;
 }
 
 .navbar {
-  max-width: 95%;
+  max-width: 90%;
   min-width: 90%;
   height: auto;
   width: auto;
@@ -317,6 +300,8 @@ header {
   font-weight: bold;
 }
 
+/* LOCALNAV */
+
 .localnav-background {
   position: absolute;
   left: 0;
@@ -359,7 +344,7 @@ header {
   line-height: 1.14286;
   font-weight: 600;
   letter-spacing: 0.011em;
-  font-family: "mono", sans-serif;
+  font-family: var(--font-mono), sans-serif;
   cursor: default;
   display: block;
   float: left;
@@ -374,8 +359,7 @@ header {
   line-height: 1;
   font-weight: 400;
   letter-spacing: -0.01em;
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
+  font-family: var(--font-mono), "SF Pro Icons", monospace, system-ui, sans-serif;
   float: right;
   margin-top: -3px;
 }
@@ -401,8 +385,10 @@ li {
   display: inline-block;
   line-height: 22px;
   white-space: nowrap;
-  opacity: .92;
-  }
+  opacity: 0.92;
+}
+
+/* FOOTER */
 
 .footer {
   padding-top: 10px;
@@ -512,6 +498,8 @@ li {
   font-size: 10px;
 }
 
+/* MAIN & SECTIONS */
+
 main {
   z-index: 0;
 }
@@ -522,25 +510,50 @@ main {
   position: relative;
   overflow: hidden;
   background-color: transparent;
+  width: 100%;
+  background-size: cover;
+  object-fit: contain;
+  padding-bottom: 50px;
 }
 
 .section.hero {
   text-align: left;
-  width: 100%;
-  height: 450px;
-  display: block;
+  height: 400px;
   background-color: var(--jetRed);
-  background-size: cover;
-  object-fit: contain;
 }
 
 .section-content {
   margin-left: auto;
   margin-right: auto;
   width: 980px;
-  padding-top: 40px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   position: relative;
+}
+
+.content-grid {
+  display:flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+.feature-box {
+  text-align: left;
+  position: relative;
+  padding: 50px;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .section-background {
@@ -550,11 +563,22 @@ main {
   object-fit: contain;
 }
 
-.section.top {
-  width: 100%;
-  height: 500px;
-  background-color: var(--gray);
-  padding-top: 20px;
+.contact-background {
+  background-image: linear-gradient(
+    45deg,
+    hsla(258, 35%, 34%, 1) 0%,
+    hsla(349, 65%, 44%, 1) 50%,
+    hsla(47, 79%, 55%, 1) 100%
+  );
+}
+
+.legal-background {
+  background-image: linear-gradient(
+    300deg,
+    rgb(50, 1, 173) 0%,
+    rgb(195, 65, 22) 60%,
+    rgb(184, 132, 12) 100%
+  );
 }
 
 .section-header {
@@ -562,16 +586,17 @@ main {
 }
 
 form {
-  font-family: "mono", system-ui;
- margin-left: auto;
- margin-right: auto;
- padding: 50px;
- width: 800px;
- text-align: left;
+  font-family: var(--font-mono), system-ui;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+  width: 800px;
+  text-align: left;
 }
 
-input, textarea {
-  font-family: "mono", system-ui;
+input,
+textarea {
+  font-family: var(--font-mono), system-ui;
   border: #000;
   border-radius: 10px;
   height: 30px;
@@ -594,8 +619,9 @@ input, textarea {
   color: var(--secondary);
 }
 
-input:focus, textarea:focus {
-  border: var(--jetRed);
+input:focus,
+textarea:focus {
+  border-color: var(--jetRed);
 }
 
 textarea.message {
@@ -611,6 +637,6 @@ input.checkbox {
 }
 input.submit {
   margin-top: 20px;
-  width: 62%;
-  height: 30px
+  width: 20%;
+  height: 30px;
 }
