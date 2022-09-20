@@ -120,7 +120,7 @@ h3 {
 h4 {
   font-size: 20px;
   opacity: 0.90;
-  font-weight: normal;
+  font-weight: 500;
   margin-bottom: 15px;
 }
 
@@ -159,7 +159,7 @@ p {
   font-weight: normal;
   cursor: pointer;
   font-size: 18px;
-  color: var(--linkColour);
+  color: var(--jetRed);
 }
 .link-text::after {
   font-family: "SF Pro Icons";
@@ -305,7 +305,7 @@ header {
   position: relative;
   vertical-align: middle;
   padding: 20px;
-  font-size: 14px;
+  font-size: 13px;
   text-decoration: none;
   letter-spacing: 1px;
 }
@@ -314,7 +314,6 @@ header {
 }
 .nav-link.current {
   color: var(--secondary);
-  font-size: 16px;
   font-weight: bold;
 }
 
@@ -567,7 +566,7 @@ form {
  margin-left: auto;
  margin-right: auto;
  padding: 50px;
- width: 700px;
+ width: 800px;
  text-align: left;
 }
 
@@ -586,6 +585,13 @@ input, textarea {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   background-color: var(--gray);
+  color: white;
+}
+
+.confirm-text {
+  align-items: flex-start;
+  font-size: 12px;
+  color: var(--secondary);
 }
 
 input:focus, textarea:focus {
