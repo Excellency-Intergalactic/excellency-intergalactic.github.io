@@ -71,7 +71,7 @@ h2 {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: 45px;
   font-weight: 600;
   opacity: 0.92;
 }
@@ -276,7 +276,7 @@ button:hover,
   position: relative;
   font-family: "Disket Mono", monospace;
   vertical-align: top;
-  z-index: 0;
+  z-index: 3;
 }
 
 .navlinks {
@@ -347,6 +347,10 @@ button:hover,
   height: 52px;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navpadding {
+  padding-top: 42px;
 }
 
 .localnav-sticky-placeholder {
@@ -575,7 +579,7 @@ main {
 }
 
 .keyline {
-  border-top: 1px solid #7d7d7d;
+  border-top: 1px solid #ababab;
   width: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -596,8 +600,11 @@ main {
 
 .section.top {
   text-align: center;
-  padding-bottom: 32px;
+  padding-bottom: 22px;
   padding-top: 70px;
+}
+.section.haslocalnav {
+  padding-top: 30px;
 }
 
 .section.featured {
