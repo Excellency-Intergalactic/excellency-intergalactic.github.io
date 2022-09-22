@@ -34,13 +34,14 @@
 
 html {
   font-family: var(--font-mono), system-ui, sans-serif;
+  display: block;
 }
 
 body {
   background-color: #000;
   font-family: var(--font-mono), system-ui;
   color: white;
-  display: block;
+  display: inherit;
   text-decoration: none;
   line-height: 20px;
   margin: 0px;
@@ -599,6 +600,13 @@ main {
   padding-top: 70px;
 }
 
+.section.featured {
+  text-align: center;
+  height: 300px;
+  padding-top: 70px;
+  background-color: #000;
+}
+
 .section-content {
   margin-left: auto;
   margin-right: auto;
@@ -679,7 +687,25 @@ main {
     250deg,
     rgb(9, 195, 80) 0%,
     rgb(14, 142, 206) 50%,
-    rgb(71, 4, 152) 100%
+    rgb(71, 4, 152) 90%
+  );
+}
+
+.research-background {
+  background-image: linear-gradient(
+    250deg,
+    rgb(28, 196, 92) 0%,
+    rgb(206, 14, 206) 50%,
+    rgb(71, 4, 152) 90%
+  );
+}
+
+.os-background {
+  background-image: linear-gradient(
+    250deg,
+    rgb(196, 174, 28) 0%,
+    rgb(206, 14, 206) 50%,
+    rgb(71, 4, 152) 90%
   );
 }
 
