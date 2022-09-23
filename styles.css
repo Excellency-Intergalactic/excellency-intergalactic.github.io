@@ -350,7 +350,7 @@ button:hover,
 }
 
 .navpadding {
-  padding-top: 42px;
+  padding-top: 55px;
 }
 
 .localnav-sticky-placeholder {
@@ -568,6 +568,10 @@ main {
   z-index: 0;
 }
 
+.section-pair {
+  display: table;
+}
+
 .section {
   text-align: center;
   display: block;
@@ -594,8 +598,8 @@ main {
 
 .section.category {
   text-align: center;
-  height: 250px;
-  padding-top: 70px;
+  height: 220px;
+  padding-top: 50px;
 }
 
 .section.top {
@@ -611,7 +615,11 @@ main {
   text-align: center;
   height: 300px;
   padding-top: 70px;
-  background-color: #000;
+  background-color: rgb(14, 5, 133);
+}
+
+.section-splitter {
+  border-top: 10px solid var(--gray);
 }
 
 .section-content {
@@ -619,6 +627,11 @@ main {
   margin-right: auto;
   width: 980px;
   position: relative;
+}
+
+.featured-title {
+  font-family: "Disket Mono";
+  font-size: 60px;
 }
 
 .content-grid {
@@ -665,6 +678,15 @@ main {
 .feedback-background {
   background-image: linear-gradient(
     185deg,
+    hsla(258, 35%, 34%, 1) 10%,
+    hsla(349, 65%, 44%, 1) 60%,
+    rgb(219, 80, 10) 100%
+  );
+}
+
+.products-background {
+  background-image: linear-gradient(
+    50deg,
     hsla(258, 35%, 34%, 1) 10%,
     hsla(349, 65%, 44%, 1) 60%,
     rgb(219, 80, 10) 100%
