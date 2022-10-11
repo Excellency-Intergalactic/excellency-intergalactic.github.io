@@ -404,6 +404,38 @@ button:hover,
   white-space: nowrap;
 }
 
+.product-title {
+  float: left;
+  font-size: 24px;
+  font-family: "Montserrat";
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: default;
+  display: block;
+  float: left;
+  margin: 5px 0 5px;
+  padding: 0;
+  height: 42px;
+  white-space: nowrap;
+}
+
+.product-cta {
+  float: right;
+  padding: 5px 15px;
+  font-size: 16px;
+  background-color: var(--jetRed);
+  font-weight: 600;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
 .localnav-menu {
   float: right;
   display: block;
