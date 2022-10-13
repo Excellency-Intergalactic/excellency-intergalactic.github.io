@@ -94,6 +94,7 @@ h4 {
   opacity: 0.9;
   font-weight: 500;
   margin-bottom: 15px;
+  z-index: 1;
 }
 
 h5 {
@@ -418,22 +419,33 @@ button:hover,
   padding: 0;
   height: 42px;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .product-cta {
   float: right;
-  padding: 5px 15px;
-  font-size: 16px;
+  padding: 8px 19px 8px 19px;
+  font-size: 14px;
   background-color: var(--jetRed);
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 100px;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -ms-border-radius: 100px;
   -o-border-radius: 100px;
-  display: block;
-  margin-top: 10px;
+  display: flex;
+  margin-top: 8px;
   margin-left: 20px;
+  align-items: center;
+  transition: .2s;
+}
+
+.product-cta:hover {
+  background-color: #cf0029;
+}
+
+.download-icon {
+  margin-right: 8px;
 }
 
 .localnav-menu {
@@ -611,7 +623,7 @@ main {
   object-fit: contain;
   padding-bottom: 50px;
   padding-top: 50px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .keyline {
@@ -648,6 +660,47 @@ main {
   height: 300px;
   padding-top: 70px;
   background-color: rgb(14, 5, 133);
+}
+
+.section.product {
+  text-align: center;
+  height: 450px;
+  padding-top: 20px;
+  z-index: 0;
+  display: block;
+  width: 100%;
+}
+
+.section.product-top {
+  text-align: center;
+  padding-top: 20px;
+  height: 1500px;
+  z-index: 0;
+  display: block;
+  width: 100%;
+}
+
+.intro-title {
+  height: 200px;
+  margin-bottom: -40px;
+  z-index: 1;
+}
+
+.intro-image {
+  max-width: 30%;
+  margin-top: -500px;
+  padding-top: 50px;
+  z-index: 0;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 800px
+}
+
+.intro-content {
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
 .section-splitter {
@@ -855,4 +908,13 @@ input.submit {
   margin-top: 20px;
   width: 20%;
   height: 30px;
+}
+
+.section.product.MM {
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 0%,
+    rgb(250, 0, 35) 40%,
+    rgb(0, 0, 0) 100%
+  );
 }
