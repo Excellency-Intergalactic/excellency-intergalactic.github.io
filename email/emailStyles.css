@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Disket Mono";
+  src: url("/fonts/Disket-Mono-Regular.ttf") format("truetype"),
+    url("/fonts/Disket-Mono-Regular.otf") format("opentype"),
+    url("/fonts/Disket-Mono-Regular.woff2") format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Disket Mono";
+  src: url("/fonts/Disket-Mono-Bold.ttf") format("truetype"),
+    url("/fonts/Disket-Mono-Bold.otf") format("opentype"),
+    url("/fonts/Disket-Mono-Bold.woff2") format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SF Pro Icons";
+  font-style: normal;
+  font-weight: 500;
+  src: local("☺"), url("/fonts/sf-pro-icons_regular.woff2") format("woff2");
+}
+
+:root {
+  --jetRed: #ff0035;
+  --gray: rgb(25, 25, 25);
+  --linkColour: #2997ff;
+  --secondary: #c8c8c8;
+  --font-mono: "IBM Plex Mono";
+}
+
+html {
+  font-family: var(--font-mono), system-ui, sans-serif;
+  display: block;
+}
+
+body {
+    background-color: #000;
+  font-family: var(--font-mono), system-ui;
+  color: white;
+  display: inherit;
+  text-decoration: none;
+  line-height: 20px;
+    max-width: 980px;
+}
+
+main {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+header {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 60px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+footer {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    color: var(--secondary);
+    font-size: 12px;
+}
+
+.logo {
+    height: 60px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: inherit;
+    transition: ease-in;
+    -webkit-transition: ease-in;
+    -moz-transition: ease-in;
+    -ms-transition: ease-in;
+    -o-transition: ease-in;
+}
+
+  a:hover {
+  cursor: pointer;
+  color: var(--jetRed);
+  }
+
+  .footer-link {
+font-size: 12px;
+color: var(--secondary);
+  }
+
+p {
+    font-size: 16px;
+    line-height: 22px;
+}
+
