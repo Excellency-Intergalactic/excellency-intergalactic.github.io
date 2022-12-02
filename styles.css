@@ -30,6 +30,7 @@
   --linkColour: #2997ff;
   --secondary: #c8c8c8;
   --font-mono: "IBM Plex Mono";
+  --featured:   rgb(43, 25, 117);
 }
 
 html {
@@ -315,6 +316,8 @@ button:hover,
   font-weight: bold;
 }
 
+
+
 /* LOCALNAV */
 
 .localnav-background {
@@ -351,7 +354,7 @@ button:hover,
 }
 
 .navpadding {
-  padding-top: 55px;
+  padding-top: 60px;
 }
 
 .localnav-sticky-placeholder {
@@ -624,6 +627,14 @@ main {
   padding-bottom: 50px;
   padding-top: 50px;
   z-index: 1;
+  overflow: hidden;
+}
+
+.contained-image {
+  padding: 0;
+  height: inherit;
+  width: 100%;
+  position: relative;
 }
 
 .keyline {
@@ -659,7 +670,9 @@ main {
   text-align: center;
   height: 300px;
   padding-top: 70px;
-  background-color: rgb(14, 5, 133);
+  background-color: var(--featured);
+  overflow:hidden;
+  align-content: flex-start;
 }
 
 .section.product {
@@ -758,6 +771,15 @@ main {
   position: absolute;
   float: none;
   object-fit: contain;
+}
+
+.fancy-background {
+  background-image: linear-gradient(
+    60deg,
+    rgb(228, 13, 70) 0%,
+    rgb(109, 15, 125) 40%,
+    rgb(38, 3, 88) 90%
+  );
 }
 
 .contact-background {
