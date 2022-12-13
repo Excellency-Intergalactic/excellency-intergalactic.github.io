@@ -31,6 +31,8 @@
   --secondary: #c8c8c8;
   --font-mono: "IBM Plex Mono";
   --featured: rgb(43, 25, 117);
+  --randomizer: #4EA6FF;
+  --musicmemo: rgb(250, 0, 35);
 }
 
 html {
@@ -447,6 +449,11 @@ button:hover,
   transition: .2s;
 }
 
+.appstore-download-button {
+  z-index: 10;
+  display: flexbox;
+}
+
 .product-cta:hover {
   background-color: #cf0029;
 }
@@ -761,6 +768,41 @@ main {
   padding: 50px;
 }
 
+.product-grid {
+  display: grid;
+  grid: auto-flow / 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-left: auto;
+  margin-left: right;
+  padding-left: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 25px;
+}
+
+.product-container {
+  display: inline-grid;
+  height: 500px;
+  background-color: rgb(10, 5, 10);
+  padding: 50px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.product-preview-title {
+  width: 60%;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.product-preview {
+  width: 40%;
+  padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .feature-box {
   text-align: left;
   position: relative;
@@ -944,5 +986,44 @@ input.submit {
 
 .R-link:hover {
   color: #2686e6;
+
+}
+
+.R-background {
+  background-color: var(--randomizer);
+}
+
+.MM-link {
+  color: rgb(250, 0, 35);
+  font-weight: bold;
+  transition: 300ms;
+
+}
+
+.MM-link:hover {
+  color: rgb(250, 0, 35);
+
+}
+
+.MM-background {
+  background-color: var(--musicmemo);
+}
+
+.section.TG {
+  background-image: linear-gradient(0deg,
+      rgb(0, 0, 0) 70%,
+      #F1CB33 80%,
+      rgb(0, 0, 0) 90%);
+}
+
+.TG-link {
+  color: #F1CB33;
+  font-weight: bold;
+  transition: 300ms;
+
+}
+
+.TG-link:hover {
+  color: #F1CB33;
 
 }

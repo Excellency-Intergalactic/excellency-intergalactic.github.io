@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8" />
-    <title> | Excellency Intergalactic</title>
-    <meta content="Learn more about us and what we do" name="description" />
-    <meta content=" | Excellency Intergalactic" property="og:title" />
-    <meta content="" property="og:description" />
-    <meta content=" | Excellency Intergalactic" property="twitter:title" />
-    <meta content="" property="twitter:description" />
+    <title>MusicMemo | Excellency Intergalactic</title>
+    <meta content="Introducing the ultimate randomizer app! With just a few taps, you can quickly and easily generate random numbers, flip a coin, or create a random color." name="description" />
+    <meta content="MusicMemo | Excellency Intergalactic" property="og:title" />
+    <meta content="Introducing the ultimate randomizer app! With just a few taps, you can quickly and easily generate random numbers, flip a coin, or create a random color." property="og:description" />
+    <meta content="MusicMemo | Excellency Intergalactic" property="twitter:title" />
+    <meta content="Introducing the ultimate randomizer app! With just a few taps, you can quickly and easily generate random numbers, flip a coin, or create a random color." property="twitter:description" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <link href="/styles.css" rel="stylesheet" type="text/css" />
@@ -38,8 +38,8 @@
     <nav id="localnav" class="localnav">
         <div class="localnav-wrapper">
             <div class="localnav-content">
-                <a href="#"><img class="product-title" src="/images/product/R/RIconText.png"></a>
-                <a href="https://r.excellency.one" class="product-cta"><svg class="download-icon"
+                <a href="/products/musicmemo.html"><img class="product-title" src="/images/product/MM/MMIconText.png"></a>
+                <a href="https://mm.excellency.one" class="product-cta"><svg class="download-icon"
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none">
                         <g clip-path="url(#clip0)">
                             <path
@@ -63,24 +63,23 @@
         </div>
     </nav>
     <main>
-        <div class="section product-top R" style="height: 1400px;">
+        <div class="section product-top MM" style="height: 1400px;">
             <div class="section top" id="intro">
                 <div class="intro-content">
-                    <img class="intro-title" src="/images/product/R/RText.png">
-                    <h4>The easiest and most versatile randomizer app on the market</h4>
+                    <img class="intro-title" src="/images/product/MM/MMText.png">
+                    <h4>The best way to record music ideas and anything else!</h4>
                 </div>
             </div>
-            <img id="" class="intro-image" src="/images/product/R/RPhone.png">
+            <img id="" class="intro-image" src="/images/product/MM/MMPhone.png">
         </div>
         <div class="section product" style="text-align: left; height:260px; padding: 0 20vw ;">
-            <p>Introducing the easiest and most versatile randomizer app on the market! With a sleek and intuitive
-                interface, the app allows you to quickly generate random numbers, flip a virtual coin, or create your
-                own custom randomizers. Whether you're looking to settle a bet with a friend, make a difficult decision,
-                or simply add some excitement to your day, our app has you covered. Download it now and start exploring
-                the endless possibilities!</p>
-            <a href="https://r.excellency.one" class="R-link"><br>>>> Download now for FREE!</a>
+            <p>MusicMemo is the easy-to-use and intuitive way to record music ideas, your voice, conversations and anything else!
+                See your recordings visualised and export them as files to anyone.
+                Change playback speed and see your voice visualised during the recording.</p>
+            <a href="https://mm.excellency.one" class="MM-link"><br>>>> Download now for FREE!</a>
         </div>
-        <a href="https://r.excellency.one" class="appstore-download-button"><img src="/images/DownloadOnTheAppStore.png"><img class="spacer"></img><img src="/images/DownloadOnTheMacAppStore.png"></a>
+        
+        <a href="https://mm.excellency.one" class="appstore-download-button"><img src="/images/DownloadOnTheAppStore.png"><img class="spacer"></img><img src="/images/DownloadOnTheMacAppStore.png"></a>
     </main>
     <footer id=" footer" class="footer">
                 <a href="/" class="footer-logo">
@@ -193,27 +192,5 @@
         </span>
         </footer>
 </body>
-<script>
-    // Get the image element
-    var image = document.getElementById("introimage");
-
-    // Get the offset position of the image
-    var imageOffset = image.offsetTop;
-
-    // Add an event listener to the window's scroll event
-    window.addEventListener("scroll", function () {
-        // Check if the window has been scrolled down more than the image offset
-        if (window.pageYOffset > imageOffset) {
-            // If so, set the image's position to fixed so it stays in the same place
-            // as the user scrolls down the page
-            image.style.position = "fixed";
-        } else if (window.pageYOffset > 2000) {
-            image.style.position = "relative";
-        } else {
-            // If not, set the image's position to absolute so it scrolls with the rest of the page
-            image.style.position = "absolute";
-        }
-    });
-</script>
 
 </html>
