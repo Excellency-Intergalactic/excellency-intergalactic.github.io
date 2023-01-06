@@ -31,7 +31,7 @@
   --secondary: #c8c8c8;
   --font-mono: "IBM Plex Mono";
   --featured: rgb(43, 25, 117);
-  --randomizer: #4EA6FF;
+  --randomizer: #4ea6ff;
   --musicmemo: rgb(250, 0, 35);
 }
 
@@ -322,8 +322,6 @@ button:hover,
   font-weight: bold;
 }
 
-
-
 /* LOCALNAV */
 
 .localnav-background {
@@ -446,7 +444,7 @@ button:hover,
   margin-top: 8px;
   margin-left: 20px;
   align-items: center;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .appstore-download-button {
@@ -746,7 +744,7 @@ main {
 
 .text-container {
   width: 60%;
-  opacity: .85;
+  opacity: 0.85;
   text-align: left;
   margin-left: auto;
   margin-right: auto;
@@ -818,6 +816,56 @@ main {
   -o-border-radius: 10px;
 }
 
+.features {
+  grid-area: c;
+  display: flex;
+  flex: 0 1 auto;
+  align-content: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-top: 93px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.feature {
+  display: flex;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: calc(100% / 3.5);
+  text-align: left;
+}
+.featureText {
+  margin-left: 18px;
+}
+.featureText > p {
+  color: #666;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.featureText > h3 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.fa-stack {
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  vertical-align: middle;
+  width: 2.5em;
+  font-size: 1em;
+  }
+
+  .iconBack {
+    color: #222;
+    }
+            .iconTop {
+              color: var(--jetRed);
+              }
+
 .section-background {
   width: 100%;
   position: absolute;
@@ -826,80 +874,102 @@ main {
 }
 
 .fancy-background {
-  background-image: linear-gradient(60deg,
-      rgb(228, 13, 70) 0%,
-      rgb(109, 15, 125) 40%,
-      rgb(38, 3, 88) 90%);
+  background-image: linear-gradient(
+    60deg,
+    rgb(228, 13, 70) 0%,
+    rgb(109, 15, 125) 40%,
+    rgb(38, 3, 88) 90%
+  );
 }
 
 .contact-background {
-  background-image: linear-gradient(45deg,
-      hsla(258, 35%, 34%, 1) 0%,
-      hsla(349, 65%, 44%, 1) 50%,
-      hsla(47, 79%, 55%, 1) 100%);
+  background-image: linear-gradient(
+    45deg,
+    hsla(258, 35%, 34%, 1) 0%,
+    hsla(349, 65%, 44%, 1) 50%,
+    hsla(47, 79%, 55%, 1) 100%
+  );
 }
 
 .feedback-background {
-  background-image: linear-gradient(185deg,
-      hsla(258, 35%, 34%, 1) 10%,
-      hsla(349, 65%, 44%, 1) 60%,
-      rgb(219, 80, 10) 100%);
+  background-image: linear-gradient(
+    185deg,
+    hsla(258, 35%, 34%, 1) 10%,
+    hsla(349, 65%, 44%, 1) 60%,
+    rgb(219, 80, 10) 100%
+  );
 }
 
 .products-background {
-  background-image: linear-gradient(50deg,
-      hsla(258, 35%, 34%, 1) 10%,
-      hsla(349, 65%, 44%, 1) 60%,
-      rgb(219, 80, 10) 100%);
+  background-image: linear-gradient(
+    50deg,
+    hsla(258, 35%, 34%, 1) 10%,
+    hsla(349, 65%, 44%, 1) 60%,
+    rgb(219, 80, 10) 100%
+  );
 }
 
 .legal-background {
-  background-image: linear-gradient(300deg,
-      rgb(50, 1, 173) 0%,
-      rgb(195, 65, 22) 60%,
-      rgb(184, 132, 12) 100%);
+  background-image: linear-gradient(
+    300deg,
+    rgb(50, 1, 173) 0%,
+    rgb(195, 65, 22) 60%,
+    rgb(184, 132, 12) 100%
+  );
 }
 
 .apps-background {
-  background-image: linear-gradient(40deg,
-      rgb(7, 0, 145) 0%,
-      rgb(206, 14, 55) 60%,
-      rgb(12, 135, 184) 100%);
+  background-image: linear-gradient(
+    40deg,
+    rgb(7, 0, 145) 0%,
+    rgb(206, 14, 55) 60%,
+    rgb(12, 135, 184) 100%
+  );
 }
 
 .consulting-background {
-  background-image: linear-gradient(250deg,
-      rgb(9, 195, 80) 0%,
-      rgb(14, 142, 206) 50%,
-      rgb(71, 4, 152) 90%);
+  background-image: linear-gradient(
+    250deg,
+    rgb(9, 195, 80) 0%,
+    rgb(14, 142, 206) 50%,
+    rgb(71, 4, 152) 90%
+  );
 }
 
 .research-background {
-  background-image: linear-gradient(250deg,
-      rgb(28, 196, 92) 0%,
-      rgb(206, 14, 206) 50%,
-      rgb(71, 4, 152) 90%);
+  background-image: linear-gradient(
+    250deg,
+    rgb(28, 196, 92) 0%,
+    rgb(206, 14, 206) 50%,
+    rgb(71, 4, 152) 90%
+  );
 }
 
 .os-background {
-  background-image: linear-gradient(250deg,
-      rgb(196, 174, 28) 0%,
-      rgb(206, 14, 206) 50%,
-      rgb(71, 4, 152) 90%);
+  background-image: linear-gradient(
+    250deg,
+    rgb(196, 174, 28) 0%,
+    rgb(206, 14, 206) 50%,
+    rgb(71, 4, 152) 90%
+  );
 }
 
 .about-background {
-  background-image: linear-gradient(250deg,
-      rgb(9, 195, 15) 0%,
-      rgb(206, 190, 14) 50%,
-      rgb(152, 4, 4) 100%);
+  background-image: linear-gradient(
+    250deg,
+    rgb(9, 195, 15) 0%,
+    rgb(206, 190, 14) 50%,
+    rgb(152, 4, 4) 100%
+  );
 }
 
 .solutions-background {
-  background-image: linear-gradient(100deg,
-      rgb(225, 180, 1) 0%,
-      rgb(206, 14, 59) 50%,
-      rgb(4, 61, 152) 100%);
+  background-image: linear-gradient(
+    100deg,
+    rgb(225, 180, 1) 0%,
+    rgb(206, 14, 59) 50%,
+    rgb(4, 61, 152) 100%
+  );
 }
 
 .section-header {
@@ -964,29 +1034,31 @@ input.submit {
 }
 
 .section.MM {
-  background-image: linear-gradient(0deg,
-      rgb(0, 0, 0) 70%,
-      rgb(250, 0, 35) 80%,
-      rgb(0, 0, 0) 90%);
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 70%,
+    rgb(250, 0, 35) 80%,
+    rgb(0, 0, 0) 90%
+  );
 }
 
 .section.R {
-  background-image: linear-gradient(0deg,
-      rgb(0, 0, 0) 70%,
-      #4EA6FF 80%,
-      rgb(0, 0, 0) 90%);
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 70%,
+    #4ea6ff 80%,
+    rgb(0, 0, 0) 90%
+  );
 }
 
 .R-link {
-  color: #4EA6FF;
+  color: #4ea6ff;
   font-weight: bold;
   transition: 300ms;
-
 }
 
 .R-link:hover {
   color: #2686e6;
-
 }
 
 .R-background {
@@ -997,12 +1069,10 @@ input.submit {
   color: rgb(250, 0, 35);
   font-weight: bold;
   transition: 300ms;
-
 }
 
 .MM-link:hover {
   color: rgb(250, 0, 35);
-
 }
 
 .MM-background {
@@ -1010,20 +1080,20 @@ input.submit {
 }
 
 .section.TG {
-  background-image: linear-gradient(0deg,
-      rgb(0, 0, 0) 70%,
-      #F1CB33 80%,
-      rgb(0, 0, 0) 90%);
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 70%,
+    #f1cb33 80%,
+    rgb(0, 0, 0) 90%
+  );
 }
 
 .TG-link {
-  color: #F1CB33;
+  color: #f1cb33;
   font-weight: bold;
   transition: 300ms;
-
 }
 
 .TG-link:hover {
-  color: #F1CB33;
-
+  color: #f1cb33;
 }
