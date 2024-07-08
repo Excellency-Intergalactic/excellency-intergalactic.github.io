@@ -1,0 +1,19 @@
+{
+    "applinks": {
+      "details": [
+        {
+          "appIDs": ["<Your Team Identifier>.<App Bundle Identifier>"],
+          "components": [
+            {
+              "/": "/wardrobeaiapp/*",
+              "comment": "Universal links"
+            },
+            {
+              "/": "/products/*",
+              "exclude": true
+            }
+          ]
+        }
+      ]
+    }
+  }
