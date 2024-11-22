@@ -2,12 +2,17 @@
     "applinks": {
       "details": [
         {
-          "appIDs": ["<Your Team Identifier>.<App Bundle Identifier>"],
+          "appIDs": ["QT255ZBP8K.one.excellency.TradingGenie"],
           "components": [
             {
-              "/": "/wardrobeaiapp/*",
+              "/": "/tradingGenieApp/*",
               "comment": "Universal links"
             },
+            {
+              "#": "no_universal_links",
+              "exclude": true,
+              "comment": "Matches any URL with a fragment that equals no_universal_links and instructs the system not to open it as a universal link."
+           },
             {
               "/": "/products/*",
               "exclude": true
