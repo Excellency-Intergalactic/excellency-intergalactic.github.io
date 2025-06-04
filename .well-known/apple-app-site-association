@@ -1,19 +1,42 @@
 {
     "applinks": {
-      "details": [
+      "apps": [],
+          "details": [
         {
-          "appIDs": ["<Your Team Identifier>.<App Bundle Identifier>"],
-          "components": [
+          "appID": "QT255ZBP8K.one.excellency.WardrobeAI",
+          "paths": [
             {
               "/": "/wardrobeaiapp/*",
               "comment": "Universal links"
-            },
-            {
-              "/": "/products/*",
-              "exclude": true
-            }
+            },{
+                            "/": "/products/*",
+                            "exclude": true
+                          }
+            ]},
+            {"appID": "QT255ZBP8K.one.excellency.TradingGenie",
+            "paths": [{
+            "/": "/tradinggenieapp/*",
+                                      "comment": "Universal links"
+            },{
+                            "/": "/products/*",
+                            "exclude": true
+                          }
+                          ]
+                          },
+                          {"appID": "QT255ZBP8K.one.excellency.Pager", "paths": [{
+                                                                               "/": "/pagerapp/*",
+                                                                               "comment": "Universal links"
+                                                                             },{
+                                                                                                           "/": "/products/*",
+                                                                                                           "exclude": true
+                                                                                                         }
+
+                                                                             ]}
           ]
         }
       ]
-    }
+    },
+    "webcredentials": {
+          "apps": ["QT255ZBP8K.one.excellency.Pager"]
+       }
   }
