@@ -289,7 +289,7 @@ button:hover,
   float: right;
   position: relative;
   left: auto;
-  display: block;
+  display: flexbox;
 }
 
 .nav-logo {
@@ -681,8 +681,8 @@ main {
 
 .section.featured {
   text-align: center;
-  height: 300px;
-  padding-top: 70px;
+  height: 480px;
+  padding-top: 20px;
   background-color: var(--featured);
   overflow: hidden;
   align-content: flex-start;
@@ -1096,4 +1096,23 @@ input.submit {
 
 .TG-link:hover {
   color: #f1cb33;
+}
+
+.section.WA {
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0) 70%,
+    #4F58FF 80%,
+    rgb(0, 0, 0) 90%
+  );
+}
+
+.WA-link {
+  color: #4F58FF;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+.WA-link:hover {
+  color: #4F58FF;
 }
